@@ -6,6 +6,12 @@ public class Block : MonoBehaviour
 {
     [SerializeField] AudioClip breakSound;
     [SerializeField] GameObject blockSparklesVFX;
+    [SerializeField] int maxHits;
+    [SerializeField] int timesHit;
+    [SerializeField] Sprite[] hitSprites;
+
+
+
     Level level;
 
     private void Start()
@@ -17,12 +23,27 @@ public class Block : MonoBehaviour
        }
     }
 
+    private void ShowNextHitSprite()
+    {
+        int spriteIndex = timesHit -1;
+        GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
+
+    }
+
 
    private void OnCollisionEnter2D(Collision2D Collision)
    {
        if(tag == "Breakable")
        {
-            DestroyBlock();
+           timesHit++;
+           if(timesHit >= maxHits)
+           {
+               DestroyBlock();
+           }
+           else
+           {
+               ShowNextHitSprite();
+           }
        }
    }
 
