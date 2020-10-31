@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ScreenLoader : MonoBehaviour
+public class SceneLoader : MonoBehaviour
 {
     public void LoadNextScene(){
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
