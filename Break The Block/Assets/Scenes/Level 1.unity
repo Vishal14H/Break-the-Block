@@ -897,6 +897,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Status
       objectReference: {fileID: 0}
+    - target: {fileID: 2472151961283002059, guid: 850139d2d612abb478b30b43b2608331, type: 3}
+      propertyPath: pointPerBlock
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472151961283002059, guid: 850139d2d612abb478b30b43b2608331, type: 3}
+      propertyPath: gameSpeed
+      value: 0.9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 850139d2d612abb478b30b43b2608331, type: 3}
 --- !u!1001 &940708610
